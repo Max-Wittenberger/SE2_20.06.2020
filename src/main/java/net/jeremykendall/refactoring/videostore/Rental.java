@@ -36,4 +36,8 @@ public class Rental {
 		}
 		return result;
 	}
+
+	public int getFrequentRenterPoints() {
+		return 1;
+	}
 }
