@@ -20,7 +20,7 @@ public class Customer {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
 
-            thisAmount = determineAmount(each);
+            thisAmount = amountFor(each);
 
             // add frequent renter points
             frequentRenterPoints ++;
@@ -40,7 +40,7 @@ public class Customer {
         return result;
     }
 
-	private double determineAmount(Rental aRental) {
+	private double amountFor(Rental aRental) {
 		double result = 0;
 		switch (aRental.getMovie().getPriceCode()) {
 		    case Movie.REGULAR:
